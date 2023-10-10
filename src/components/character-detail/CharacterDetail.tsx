@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import ICharacter from '../../interfaces/character/ICharacter'
 import ICharacterContext from '../../interfaces/character/ICharacterContext'
 import { CharacterContext } from '../../contexts/character-context/CharacterContext'
+import CharacterItem from '../character-item/CharacterItem.component'
 
 
 const CharacterDetail = () => {
@@ -29,13 +30,21 @@ const CharacterDetail = () => {
     <div>
       <h1>Item Detail View</h1>
       {item ? (
-        <div>
-          <img src={item.image} alt={item.name} />
-          <h2>{item.name}</h2>
-          <p>Gender: {item.gender}</p>
-          <p>DoA: {item.status}</p>
-          <p>ID: {item.id}</p>
+    <article className="col-sm-6 col-md-4 col-lg-3 mt-4">
+    <article className="card">
+      <div className="card-img-top">
+        <img className="card-img-top" src={item.image} alt="" />
+      </div>
+      <div className="card-body">
+        <h5 className="mb-4">{item.name}</h5>
+        <p className="mb-2">Status: {item.status}</p>
+        <p className="mb-2">Gender: {item.gender}</p>
+        <p className="mb-2">Id: {item.id}</p>
+        <div className="d-flex flex-row justify-content-between">
         </div>
+      </div>
+    </article>
+  </article>
       ) : (
         <p>Loading...</p>
       )}
