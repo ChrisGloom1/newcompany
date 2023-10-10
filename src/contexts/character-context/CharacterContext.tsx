@@ -19,7 +19,6 @@ const CharacterProvider = ({children}: Props) => {
 
   const getCharacters = async () => {
     const characters = await ApiService.getAll()
-    console.log(characters.results)
     setCharacters(characters.results)
   }
 

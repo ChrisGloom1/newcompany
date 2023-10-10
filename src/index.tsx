@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CharacterProvider from './contexts/character-context/CharacterContext';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import FavoriteCharactersProvider from './contexts/favorite-characters-context/FavoriteCharactersContext';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <CharacterProvider>
-      <App />
+      <FavoriteCharactersProvider>
+        <App />
+      </FavoriteCharactersProvider>
     </CharacterProvider>
   </React.StrictMode>
 );
