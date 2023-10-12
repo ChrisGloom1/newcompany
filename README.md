@@ -1,4 +1,4 @@
-# Getting Started with the little project
+# Getting Started with the small project
 The project is created using the following tech:
 - React.js
 - Typescript
