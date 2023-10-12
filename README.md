@@ -1,4 +1,4 @@
-# Getting Started with the small project
+# Getting Started with the project
 The project is created using the following tech:
 - React.js
 - Typescript
@@ -18,7 +18,7 @@ This project uses the following techniques:
 
 ### Script to run the project
 
-In the project directory, you have to install the packages necessary to run:\
+In the project directory, you have to install the packages necessary:\
 `npm i` or `npm install`
 
 Thereafter you'd have to run:\
