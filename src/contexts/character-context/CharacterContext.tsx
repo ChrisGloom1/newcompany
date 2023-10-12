@@ -30,4 +30,4 @@ const CharacterProvider = ({children}: Props) => {
 
 }
 
-export default CharacterProvider
+export default CharacterProvider 

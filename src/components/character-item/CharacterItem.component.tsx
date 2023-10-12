@@ -1,24 +1,29 @@
 import { FC, useEffect, useState } from "react";
 import ICharacter from "../../interfaces/character/ICharacter";
 import { Link } from "react-router-dom";
-import { useFavoriteCharacters } from "../../contexts/favorite-characters-context/FavoriteCharactersContext";
 
 const CharacterItem: FC<ICharacter> = ({ id, name, image, gender, status }) => {
-  const { favoriteCharacters } = useFavoriteCharacters();
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
 
   const handleToggleFavorite = () => {
     setIsFavorite(!isFavorite);
     const favoritedCharacters = JSON.parse(localStorage.getItem("favoritedCharacters") || "");
+    // if char is favorite, filter the array and remove the char with the corresponding id
+    // if char is not favorite, spread the array and add the chars params to the array
     const updatedCharacters = isFavorite
       ? favoritedCharacters.filter((char: { id: number }) => char.id !== id)
       : [...favoritedCharacters, { id, name, image, gender, status }];
+
+      // set the updated array to local storage value for favoritedCharacters
     localStorage.setItem("favoritedCharacters", JSON.stringify(updatedCharacters));
   };
 
   useEffect(() => {
+    // get the favoritedCharacters from local storage
     const favoritedCharacters = JSON.parse(localStorage.getItem("favoritedCharacters") || "");
-    const isCharacterFavorited = favoritedCharacters.some((char: { id: number }) => char.id === id);
+    // check if the current character is in the array of favorited characters
+    // some() returns true if at least one element in the array passes the test. If truthie, set isFavorite to true
+    const isCharacterFavorited: boolean = favoritedCharacters.some((char: { id: number }) => char.id === id);
     setIsFavorite(isCharacterFavorited);
   }, []);
 
@@ -32,7 +37,7 @@ const CharacterItem: FC<ICharacter> = ({ id, name, image, gender, status }) => {
           <h5 className="mb-4">{name}</h5>
           <div className="d-flex flex-row justify-content-between">
             <Link to={`/detail/${id}`}>
-              <button className="btn btn-primary p2">Se mer!</button>
+              <button className="btn btn-primary p2">See more</button>
             </Link>
             <button onClick={handleToggleFavorite} className="btn btn-info p2">
               {isFavorite ? "🩷" : "🤍"}

@@ -1,9 +1,8 @@
-import React from 'react'
-import CharacterList from '../character-list/CharacterList.component'
 import CharacterItem from '../character-item/CharacterItem.component'
 
 const FavoritedCharacters = () => {
 
+  // get key from favoritedCharacters from localStorage, if it doesn't exist, set it to an empty array
   const favoritedCharactersFromLocalStorage = JSON.parse(localStorage.getItem('favoritedCharacters') || '[]')
 
   const favoritedCharacters = favoritedCharactersFromLocalStorage.map((char: { id: number; name: string; gender: string; status: string; image: string }) => (
@@ -16,11 +15,10 @@ const FavoritedCharacters = () => {
       image={char.image}
     />
   ))
-  
 
   return (
     <div>
-      {favoritedCharacters.size > 0 ? favoritedCharacters : <p>No favorited characters</p>}
+      {favoritedCharacters.size > 0 ? favoritedCharacters : <p>No favorited characters...</p>}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CharacterContext } from "../../contexts/character-context/CharacterContext";
 import ICharacterContext from "../../interfaces/character/ICharacterContext";
 import CharacterItem from "../character-item/CharacterItem.component";
@@ -26,6 +26,11 @@ const CharacterList = () => {
   const sortCharacters = (charactersToSort: ICharacter[], sortingOption: string) => {
     switch (sortingOption) {
       case "idAscending":
+        // if a is less than b, return a negative number
+        // if b is less than a, return a positive number
+        // if a is equal to b, return 0
+        
+        // sort() sorts the array in place, so we need to spread the array to create a new array
         return [...charactersToSort].sort((a, b) => a.id - b.id);
       case "idDescending":
         return [...charactersToSort].sort((a, b) => b.id - a.id);

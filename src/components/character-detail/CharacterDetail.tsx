@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom'
 import ICharacter from '../../interfaces/character/ICharacter'
 import ICharacterContext from '../../interfaces/character/ICharacterContext'
 import { CharacterContext } from '../../contexts/character-context/CharacterContext'
-import CharacterItem from '../character-item/CharacterItem.component'
-
 
 const CharacterDetail = () => {
 
@@ -20,6 +18,7 @@ const CharacterDetail = () => {
   }, [])
 
   const getCharacterById = ({ id }: { id: number }) => {
+    // find the character with the corresponding id
     const character = characters.find(char => char.id === id)
     if (character) {
       setItem(character);
