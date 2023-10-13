@@ -19,6 +19,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link to="/FavoritedCharactersPage" className="nav-link">Favorites</Link>
               </li>
+              <li className="nav-item">
+                <Link to="/SignInPage" className="nav-link">Log In</Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import CharacterProvider from './contexts/character-context/CharacterContext';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import FavoriteCharactersProvider from './contexts/favorite-characters-context/FavoriteCharactersContext';
+import { AuthProvider } from './contexts/auth-context/AuthProvider';
 
 
 const root = ReactDOM.createRoot(
@@ -13,11 +14,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <CharacterProvider>
-      <FavoriteCharactersProvider>
-        <App />
-      </FavoriteCharactersProvider>
-    </CharacterProvider>
+    <AuthProvider>
+      <CharacterProvider>
+        <FavoriteCharactersProvider>
+          <App />
+        </FavoriteCharactersProvider>
+      </CharacterProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
 

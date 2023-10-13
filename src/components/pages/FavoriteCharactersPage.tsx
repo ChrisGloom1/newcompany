@@ -13,7 +13,7 @@ const FavoriteCharactersPage = () => {
 
   return (
     <section className="mt-5">
-      <h3 className="mb-4">Your favorite characters</h3>
+      <h2 className="mb-4">Your favorite characters</h2>
       <div className="row gy-4">
         {favoriteCharacters.length !== 0 ? (
           favoriteCharacters.map((char: ICharacter) => (

@@ -4,7 +4,7 @@ const HomePage = () => {
 
   return (
     <section className="mt-5">
-      <h3 className="mb-4">20 first characters in Rick & Morty</h3>
+      <h2 className="mb-4">Rick & Morty characters</h2>
       <CharacterList/>
     </section>
   )

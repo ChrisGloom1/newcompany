@@ -1,20 +1,26 @@
 # Getting Started with the project
-The project is created using the following tech:
+
+The project usies the following tech/techniques:
+
 - React.js
 - Typescript
 - Bootstrap
 - Axios
+- FontAwesome
 
-This project uses the following techniques:
+- Regex
 - Interfaces
 - Routes
 - useState
 - useEffect
 - useContext
+- useRef
 - localStorage
 - Search for items
 - Sort items
 - Http requests (with Axios)
+
+There are clearifying and explanatory comments in the project.
 
 ### Script to run the project
 
