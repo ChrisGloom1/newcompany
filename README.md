@@ -22,7 +22,7 @@ The project usies the following tech/techniques:
 
 There are clearifying and explanatory comments in the project.
 
-### Script to run the project
+## Script to run the project
 
 In the project directory, you have to install the packages necessary:\
 `npm i` or `npm install`
@@ -34,3 +34,11 @@ This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console.
+
+## TODO
+- Create a backend and database to register and authenticate when logging in.
+- Change the detail page for characters.
+- Change "See more" button for smaller screens.
+- Make sure all cards have the same height, no matter the length of the name.
+- Get more pages of characters from the API.
+- Apply safe routes for the page.
