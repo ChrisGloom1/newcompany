@@ -36,9 +36,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits. You will also see any lint errors in the console.
 
 ## TODO
-- Create a backend and database to register and authenticate when logging in.
-- Change the detail page for characters.
+- Create a backend (Node.js) and database (Mongo DB) to register and authenticate when logging in.
+- Change the detail page for characters to view more information.
 - Change "See more" button for smaller screens.
 - Make sure all cards have the same height, no matter the length of the name.
-- Get more pages of characters from the API.
+- Get more pages of characters from the API using pagination or lazy loading.
 - Apply safe routes for the page.
+- Make sorting function as a component to reuse functionality on Favorites page.
